@@ -39,7 +39,25 @@ Airplane.prototype.land = function () {
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-function Person() {
+function Person(names, ages) {
+  this.name = names,
+  this.age = ages,
+  this.stomach = [],
+  this.eat = function(someFood){
+    if (this.stomach.length === 10){
+      return;
+    }
+    else {
+      this.stomach.push(someFood);
+    }
+  }
+this.poop = function() {
+  this.stomach.length === 0;
+}
+
+this.toString = function() {
+  return `${this.name}, ${this.age}`
+}
 
 }
 
@@ -57,7 +75,7 @@ function Person() {
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
+function Car(model, milesPerGallon) {
 
 }
 
